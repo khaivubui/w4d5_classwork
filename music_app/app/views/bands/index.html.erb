@@ -1,0 +1,9 @@
+<% content_for :header do%>
+  <h1>Bands</h1>
+<% end %>
+
+<ul>
+  <%= render @bands %>
+</ul>
+<br>
+<%= link_to "Add new band", new_band_url %>

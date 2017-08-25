@@ -1,0 +1,14 @@
+<% content_for :header do%>
+  <h1><%= @band.name %></h1>
+<% end %>
+
+<div class="band-options">
+  <%= button_to "Add an album", new_band_album_url(@band), method: :get %>
+  <%= button_to "Edit Band", edit_band_url(@band), method: :get %>
+  <%= button_to "Delete Band",
+                band_url(@band),
+                method: :delete,
+                data: { confirm: "Delete #{@band.name} from the database?"}%>
+</div>
+
+<%= link_to 'Back to bands', bands_url %>
