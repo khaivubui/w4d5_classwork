@@ -1,0 +1,17 @@
+<% content_for :header do%>
+  <h1><%= @album.title %></h1>
+<% end %>
+
+Band: <%= @band.name %><br>
+Year: <%= @album.year %><br>
+Studio: <%= @album.studio %><br>
+Live: <%= @album.live %><br>
+<%= link_to 'Edit Album', edit_album_url(@album) %>
+<%= link_to 'Delete Album',
+album_url(@album),
+method: :delete,
+data: { confirm: "Delete#{@album.title} from the database?"} %>
+
+<br>
+<br>
+<%= link_to "Back to #{@band.name}", band_url(@band) %>

@@ -2,6 +2,8 @@
   <h1><%= @band.name %></h1>
 <% end %>
 
+<%= render @band.albums %>
+
 <div class="band-options">
   <%= button_to "Add an album", new_band_album_url(@band), method: :get %>
   <%= button_to "Edit Band", edit_band_url(@band), method: :get %>
@@ -10,5 +12,5 @@
                 method: :delete,
                 data: { confirm: "Delete #{@band.name} from the database?"}%>
 </div>
-
+<br>
 <%= link_to 'Back to bands', bands_url %>

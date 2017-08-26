@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>MusicApp</title>
+    <title>AwesomeMusicApp</title>
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all' %>
@@ -13,7 +13,7 @@
       <header>
         <% if current_user %>
           <div class="welcome-message">
-            <%= link_to 'HOME', bands_url %>
+            <%= link_to 'BANDS', bands_url %>
             <%= "|" %>
             <%= "Welcome, " %>
             <%= link_to "#{current_user.email}", user_url(current_user) %>

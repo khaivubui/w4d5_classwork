@@ -16,4 +16,6 @@ class Album < ApplicationRecord
   validates :title, :band_id, :year, presence: true
 
   belongs_to :band
+
+  has_many :tracks
 end

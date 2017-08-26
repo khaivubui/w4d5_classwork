@@ -1,0 +1,15 @@
+Title: <%= album.title %>
+<div class="details">
+  Year: <%= album.year %><br>
+  Studio: <%= album.studio %><br>
+  Live: <%= album.live %>
+  <br>
+  <%= link_to 'View Album', album_url(album) %>
+  <br>
+  <%= link_to 'Edit Album', edit_album_url(album) %>
+  <%= link_to 'Delete Album',
+  album_url(album),
+  method: :delete,
+  data: { confirm: "Delete#{album.title} from the database?"} %>
+</div>
+<br>
